@@ -17,9 +17,9 @@ module NavigationHelpers
     when /^the (RottenPotatoes )?home\s?page$/ then '/movies'
     when /^the home\s?page$/
       '/movies'
-    when /the edit page for "(.*)"/
+    when /^the edit page for "(.*)"/
       edit_movie_path(Movie.find_by_title($1))
-    when /the details page for "(.*)"/
+    when /^the details page for "(.*)"/
       movie_path(Movie.find_by_title($1))
     when /^the Similar Movies page for "(.*)"$/
       search_movie_by_director_movie_path(Movie.find_by_title($1).id)
