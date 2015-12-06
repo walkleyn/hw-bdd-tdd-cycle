@@ -879,3 +879,12 @@ Migrating to AddDirectorToMovie (20151128124000)
   [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (51.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151128124000')
   [1m[36m (103.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (698.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime, "director" varchar) [0m
+  [1m[35m (1040.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1571.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (813.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151128124000')
+  [1m[36m (1144.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
