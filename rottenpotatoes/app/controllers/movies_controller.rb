@@ -67,7 +67,7 @@ class MoviesController < ApplicationController
     if @movies.nil?
       flash[:notice] = "\'#{@movie.title}\' has no director info"
       redirect_to movies_path
-    end 
-  end  
+    end
+  end
 
 end
